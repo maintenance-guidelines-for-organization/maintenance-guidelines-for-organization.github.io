@@ -71,7 +71,7 @@ export class GuideState {
         }
         const replacedContent = replace(args.source.originalContent || args.source.content, [
             {
-                pattern: /CODE_OF_CONDUCT_LINK/g,
+                pattern: /\[\[CODE_OF_CONDUCT_LINK\]\]/g,
                 replaceTo: args.codeOfConductLink
             },
             {
@@ -108,7 +108,7 @@ export class GuideStore extends EventEmitter {
     constructor() {
         super();
         this.state = new GuideState({
-            codeOfConductLink: "http://example.com",
+            codeOfConductLink: "http://example.com/code_of_conduct.md",
             gitHubOrganizationName: "your-organization",
             npmOrganizationName: "your-organization",
             emailAddress: "your-organization@example.com"

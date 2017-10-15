@@ -97,7 +97,6 @@ body,
     display: flex;
     min-width: 100%;
     width: 100%;
-    background-color: #000;
 }
 
 .App-contentSource,
