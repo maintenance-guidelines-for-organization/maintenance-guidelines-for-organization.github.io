@@ -2,10 +2,11 @@ import * as React from "react";
 import "./App.css";
 import "office-ui-fabric-react/dist/css/fabric.css";
 import { GuideState, GuideStore, SUPPORT_LANG, SUPPORT_LANG_GROUP } from "../store/GuideStore";
-import { TextField } from "office-ui-fabric-react";
+import { ActionButton, TextField } from "office-ui-fabric-react";
 import { updateGuideState } from "../action/updateGuideState";
 import { LanguageSelector } from "./LanguageSelector";
 import { fetchGuideContent } from "../action/fetchGuideContent";
+import { saveAsFile } from "../action/saveAsFile";
 
 const Markdown = require("react-remarkable");
 
@@ -20,6 +21,11 @@ export interface AppState {
 export class App extends React.Component<AppProps, AppState> {
     private onChangedLanguage = (lang: SUPPORT_LANG) => {
         fetchGuideContent(this.props.guide, lang);
+    };
+    private onClickDownloadButton = () => {
+        if (this.state.guide.source) {
+            saveAsFile(this.state.guide.source.content, "maintenance-guidelines-for-organization.md");
+        }
     };
 
     componentWillMount() {
@@ -42,9 +48,18 @@ export class App extends React.Component<AppProps, AppState> {
         const content =
             guideState && guideState.haveBeenFilled ? (
                 <div className="App-content">
-                    <textarea className="App-contentSource" value={guideState.source!.content} readOnly={true} />
-                    <div className="App-contentPreview">
-                        <Markdown source={guideState.source!.content} />
+                    <header className="App-contentHeader">
+                        <div className="App-contentDownloadButton">
+                            <ActionButton iconProps={{ iconName: "Download" }} onClick={this.onClickDownloadButton}>
+                                Download as file
+                            </ActionButton>
+                        </div>
+                    </header>
+                    <div className="App-contentBody">
+                        <textarea className="App-contentSource" value={guideState.source!.content} readOnly={true} />
+                        <div className="App-contentPreview">
+                            <Markdown source={guideState.source!.content} />
+                        </div>
                     </div>
                 </div>
             ) : null;
