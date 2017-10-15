@@ -3,6 +3,18 @@
         padding: 0;
     }
 
+    .App-descriptorListItem {
+        padding-right: 0;
+    }
+
+    .App-descriptorListItemTitle {
+        font-size: 20px;
+    }
+
+    .App-descriptorListItemDescription {
+        font-size: 14px;
+    }
+
     .App-contentSource {
         display: none;
     }

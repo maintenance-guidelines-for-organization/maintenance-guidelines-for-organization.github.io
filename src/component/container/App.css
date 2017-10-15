@@ -18,8 +18,7 @@ body,
 }
 
 .App-header {
-    text-align: center;
-    padding: 16px;
+    padding: 48px 16px 16px 16px;
     color: #f8f8f8;
     background-color: #038387;
     font-weight: 100;
@@ -34,9 +33,11 @@ body,
 
 .App-headerTitle {
     font-size: 48px;
+    text-align: center;
 }
 
 .App-headerSubDescription {
+    text-align: center;
 }
 
 .App-descriptionTitle {
@@ -53,6 +54,7 @@ body,
 
 .App-descriptorListItem {
     flex: 1;
+    padding: 0 20px;
 }
 
 .App-descriptorListItemTitle {
