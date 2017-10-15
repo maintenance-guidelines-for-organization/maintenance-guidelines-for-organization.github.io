@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/prop-types": "^15.5.2",
     "github-api": "^3.0.0",
     "office-ui-fabric-react": "^5.8.2",
     "react": "^16.0.0",
