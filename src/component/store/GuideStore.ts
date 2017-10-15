@@ -114,7 +114,7 @@ export class GuideStore extends EventEmitter {
     constructor() {
         super();
         this.state = new GuideState({
-            codeOfConductLink: "http://example.com/code_of_conduct.md",
+            codeOfConductLink: "http://example.com/CODE_OF_CONDUCT.md",
             gitHubOrganizationName: "GITHUB_ORGANIZATION",
             npmOrganizationName: "NPM_ORGANIZATION",
             emailAddress: "your-organization@example.com"
