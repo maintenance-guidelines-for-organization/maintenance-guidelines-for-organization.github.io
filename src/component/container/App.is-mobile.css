@@ -1,7 +1,8 @@
-@media (min-width: 320px) {
+@media (max-width: 480px) {
     .App-descriptor {
         padding: 0;
     }
+
     .App-contentSource {
         display: none;
     }
