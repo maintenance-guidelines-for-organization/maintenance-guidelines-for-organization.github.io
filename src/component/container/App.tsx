@@ -50,9 +50,6 @@ export class App extends React.Component<AppProps, AppState> {
             ) : null;
         return (
             <div className="App">
-                <div className="App-header">
-                    <h1>Maintenance Guidelines for Organization</h1>
-                </div>
                 <a href="https://github.com/maintenance-guidelines-for-organization/guide">
                     <img
                         style={{
@@ -65,6 +62,31 @@ export class App extends React.Component<AppProps, AppState> {
                         alt="Fork me on GitHub"
                     />
                 </a>
+                <div className="App-header">
+                    <h1 className="App-headerTitle">Maintenance Guidelines for Organization</h1>
+                    <p className="App-headerSubDescription">
+                        This guideline aim to avoid stopping the project by human bottlenecks.
+                    </p>
+                </div>
+                <div className="App-descriptor">
+                    <ul className="App-descriptorList">
+                        <li className="App-descriptorListItem">
+                            <h3 className="App-descriptorListItemTitle">Avoid human bottlenecks</h3>
+                            <p className="App-descriptorListItemDescription">
+                                In order to minimize human bottlenecks, all members should be fully empowered to do
+                                everything that might be necessary to handle administration of the project.
+                            </p>
+                        </li>
+                        <li className="App-descriptorListItem">
+                            <h3 className="App-descriptorListItemTitle">Trust people to do the right thing</h3>
+                            <p className="App-descriptorListItemDescription">
+                                For some actions, it might be good to discuss with other members and the community about
+                                the best course of action. For other decisions, it might be better to take individual
+                                initiative.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
                 <div className="App-form">
                     <TextField
                         label="Organization Email"

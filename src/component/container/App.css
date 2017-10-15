@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 html,
@@ -18,14 +19,60 @@ body,
 
 .App-header {
     text-align: center;
-    background-color: #222;
-    padding: 20px;
-    font-size: 36px;
-    color: white;
+    padding: 16px;
+    color: #f8f8f8;
+    background-color: #038387;
+    font-weight: 100;
+    line-height: 1;
+}
+
+.App-descriptor {
+    color: #f8f8f8;
+    padding: 0.5rem 5rem;
+    background-color: #038387;
+}
+
+.App-headerTitle {
+    font-size: 48px;
+}
+
+.App-headerSubDescription {
+}
+
+.App-descriptionTitle {
+    font-size: 32px;
+    margin: 0;
+    font-smoothing: antialiased;
+}
+
+.App-descriptorList {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.App-descriptorListItem {
+    flex: 1;
+    padding-right: 48px;
+}
+
+.App-descriptorListItemTitle {
+    display: block;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    margin-top: 32px;
+}
+
+.App-descriptorListItemDescription {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
 .App-form {
-    padding: 1em 5em;
+    padding: 1rem 5rem;
 }
 
 .App-form-ShowButton {
