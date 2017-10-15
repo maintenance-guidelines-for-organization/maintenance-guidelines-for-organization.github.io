@@ -109,3 +109,14 @@ body,
     font-size: 16px;
     background-color: #f8f8f8;
 }
+
+.App-contentPreview {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.App-contentPreview pre {
+    overflow: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
