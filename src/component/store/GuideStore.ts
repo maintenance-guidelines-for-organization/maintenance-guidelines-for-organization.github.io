@@ -2,18 +2,24 @@
 import { EventEmitter } from "events";
 
 export enum SUPPORT_LANG {
-    en = "en"
+    en = "en",
+    ja = "ja"
 }
 
 export const SUPPORT_LANG_GROUP = [
     {
         lang: SUPPORT_LANG.en,
         text: "English"
+    },
+    {
+        lang: SUPPORT_LANG.ja,
+        text: "Japanese"
     }
 ];
 
 export enum GUIDE_PATH {
-    en = "content/en/README.md"
+    en = "content/en/README.md",
+    ja = "content/ja/README.md"
 }
 
 export interface GuideLineSource {
@@ -141,8 +147,10 @@ export class GuideStore extends EventEmitter {
         switch (lang) {
             case SUPPORT_LANG.en:
                 return GUIDE_PATH.en;
+            case SUPPORT_LANG.ja:
+                return GUIDE_PATH.ja;
             default:
-                return GUIDE_PATH.en;
+                throw new Error(`Not support language: ${lang}`);
         }
     }
 }

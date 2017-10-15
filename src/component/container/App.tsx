@@ -148,7 +148,7 @@ export class App extends React.Component<AppProps, AppState> {
                     <LanguageSelector
                         languages={SUPPORT_LANG_GROUP}
                         selectedLang={this.state.guide.source ? this.state.guide.source!.lang : SUPPORT_LANG.en}
-                        onChanged={this.onChangedLanguage}
+                        onChange={this.onChangedLanguage}
                     />
                 </div>
                 {content}

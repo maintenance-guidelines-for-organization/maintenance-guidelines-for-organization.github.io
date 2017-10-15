@@ -7,12 +7,12 @@ export interface LanguageSelectorProps {
     languages: typeof SUPPORT_LANG_GROUP;
     selectedLang: SUPPORT_LANG;
 
-    onChanged: (newLanguage: SUPPORT_LANG) => void;
+    onChange: (newLanguage: SUPPORT_LANG) => void;
 }
 
 export class LanguageSelector extends React.Component<LanguageSelectorProps, {}> {
     private onChanged = (event: any, options: IChoiceGroupOption) => {
-        this.props.onChanged(options.text as SUPPORT_LANG);
+        this.props.onChange(options.key as SUPPORT_LANG);
     };
 
     render() {
