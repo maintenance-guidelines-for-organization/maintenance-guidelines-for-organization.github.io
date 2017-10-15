@@ -9,6 +9,6 @@ after_success:
 
         $(npm bin)/update-branch --commands "yarn run build" \
                                  --commit-message "Update website [skip ci]" \
-                                 --directory "./public" \
+                                 --directory "./build" \
                                  --distribution-branch "master" \
                                  --source-branch "develop"
