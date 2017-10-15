@@ -1,0 +1,14 @@
+language: node_js
+node_js: stable
+after_success:
+  - |
+
+        $(npm bin)/set-up-ssh --key "$encrypted_c9ca9ca6ff07_key" \
+                             --iv "$encrypted_c9ca9ca6ff07_iv" \
+                             --path-encrypted-key ".travis/github_deploy_key.enc"
+
+        $(npm bin)/update-branch --commands "yarn run build" \
+                                 --commit-message "Update website [skip ci]" \
+                                 --directory "./public" \
+                                 --distribution-branch "master" \
+                                 --source-branch "develop"
