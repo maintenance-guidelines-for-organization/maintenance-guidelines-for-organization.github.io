@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@alrra/travis-scripts@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@alrra/travis-scripts/-/travis-scripts-3.0.1.tgz#45d5b9357317b6cc5553dfd99931843ae0b0e53a"
+
 "@microsoft/load-themed-styles@^1.7.2":
   version "1.7.5"
   resolved "https://registry.yarnpkg.com/@microsoft/load-themed-styles/-/load-themed-styles-1.7.5.tgz#2a55cbd8b3f54cecbd236c9c3fddc0bc1356bbc9"
