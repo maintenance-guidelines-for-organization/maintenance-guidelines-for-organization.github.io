@@ -13,7 +13,7 @@ export const SUPPORT_LANG_GROUP = [
 ];
 
 export enum GUIDE_PATH {
-    en = "README.md"
+    en = "content/en/README.md"
 }
 
 export interface GuideLineSource {
